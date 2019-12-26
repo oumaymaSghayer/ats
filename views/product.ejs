@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    <style>
+        body{
+           text-align: center;}
+       .maindiv{
+           position: absolute;
+           width: 100%;
+           
+       }
+    </style> </head>
+    <body> <br>
+       
+        <div  >
+            <div class="maindiv" style="text-align: center;">
+                
+                    <div class="col-md-3">
+                        <a href='/products'>Retour</a>
+                    </div>
+                    <div class="col-md-6" >
+                        <div class="thumbnail">
+                            <img src="<%= product.imageUrl %>">
+                            <div class="caption">
+                                <h3><%= product.productName %></h3>
+                                <p><%= product.category %></p>
+                                <p>$<%= product.price %></p>
+                                <p>Reviews</p>
+                                <% for (var i = 0; i < reviews.length; i++) {%>
+                                    <div >
+                                        <div class="thumbnail">
+                                            
+                                            <div class="caption">
+                                               
+                                                <p>Rating : <%= reviews[i].rating %></p>
+                                                <p>Coment : <%= reviews[i].content %></p>
+                                                
+                                                <br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <% } %>                                 
+                        </div> </div>
+                    <div class="col-md-3">
+                      
+                    </div>
+            </div>
+           
+    </body>
+</html>
